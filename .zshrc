@@ -69,3 +69,5 @@ if [ -z "$SSH_TTY" ]; then
     # Wake up smartcard to avoid races
     gpg --card-status > /dev/null 2>&1 
 fi
+
+alias fixkey="killall -9 gpg-agent && killall scdaemon && source .zshrc && ssh-add -L"
