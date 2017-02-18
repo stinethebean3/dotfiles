@@ -1,7 +1,7 @@
 ! General urxvt preferences
 urxvt*loginShell:true
 urxvt*transparent:true
-urxvt*shading:60
+urxvt*shading:20
 urxvt*background:Black
 urxvt*foreground:White
 urxvt*scrollBar:false
@@ -35,38 +35,6 @@ URxvt.keysym.C-S-Down: font-size:decglobal
 *pointerColorBackground: #586e75
 *pointerColorForeground: #93a1a1
  
-!! black dark/light
-*color0: #073642
-*color8: #002b36
- 
-!! red dark/light
-*color1: #dc322f
-*color9: #cb4b16
- 
-!! green dark/light
-*color2: #859900
-*color10: #586e75
- 
-!! yellow dark/light
-*color3: #b58900
-*color11: #657b83
- 
-!! blue dark/light
-*color4: #268bd2
-*color12: #839496
- 
-!! magenta dark/light
-*color5: #d33682
-*color13: #6c71c4
- 
-!! cyan dark/light
-*color6: #2aa198
-*color14: #93a1a1
- 
-!! white dark/light
-*color7: #eee8d5
-*color15: #fdf6e3
-
 !! HiDPI
 Xft.dpi: 180
 Xft.autohint: 0
@@ -78,4 +46,26 @@ Xft.rgba: rgb
 
 !Xft.antialias:           rgba
 !Xft.hinting:             true
+
+!! Colors
+! special
+URxvt.foreground:   #ffffff
+URxvt.background:   #000000
+URxvt.cursorColor:  #ffffff
+URxvt.color0:       #1b1d1e
+URxvt.color8:       #505354
+URxvt.color1:       #f92672
+URxvt.color9:       #ff5995
+URxvt.color2:       #82b414
+URxvt.color10:      #b6e354
+URxvt.color3:       #fd971f
+URxvt.color11:      #feed6c
+URxvt.color4:       #4e82aa
+URxvt.color12:      #0c73c2
+URxvt.color5:       #8c54fe
+URxvt.color13:      #9e6ffe
+URxvt.color6:       #465457
+URxvt.color14:      #899ca1
+URxvt.color7:       #ccccc6
+URxvt.color15:      #f8f8f2
 
