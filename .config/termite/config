@@ -1,0 +1,33 @@
+[options]
+font = Hack 8
+use_xft = true
+icon_name = terminal
+browser = xdg-open
+
+[colors]
+foreground = #ffffff
+foreground_bold = #eee8d5
+background = rgba(10,10,10,0.8)
+cursor = #ffffff
+
+# if unset, will reverse foreground and background
+#highlight = #839496
+
+# colors from color0 to color254 can be set
+color0 = #1b1d1e
+color8 = #505354
+color1 = #f92672
+color9 = #ff5995
+color2 = #82b414
+color10 = #b6e354
+color3 = #fd971f
+color11 = #feed6c
+color4 = #4e82aa
+color12 = #0c73c2
+color5 = #8c54fe
+color13 = #9e6ffe
+color6 = #465457
+color14 = #899ca1
+color7 = #ccccc6
+color15 = #f8f8f2
+
