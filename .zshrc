@@ -40,34 +40,11 @@ plugins=(git vi-mode docker pass systemdi z)
 export PATH="/usr/local/bin:/usr/bin:/bin:/opt/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
+export SSH_AUTH_SOCK=/run/user/$(id -u)/gnupg/S.gpg-agent.ssh
 
 export QT_DEVICE_PIXEL_RATIO=auto
 
 source $ZSH/oh-my-zsh.sh
 source `pip2 show powerline-status | grep Location | sed 's/Location: //g'`/powerline/bindings/zsh/powerline.zsh
-
-
-# If running locally
-if [ -z "$SSH_TTY" ]; then
-
-    # setup local gpg-agent with ssh support and save env to fixed location
-    # so it can be easily picked up and re-used for multiple terminals
-    envfile="$HOME/.gnupg/gpg-agent.env"
-    if [[ ! -e "$envfile" ]] || ( \
-           # deal with changed socket path in gnupg 2.1.13
-           [[ ! -e "$HOME/.gnupg/S.gpg-agent" ]] && \
-           [[ ! -e "/var/run/user/$(id -u)/gnupg/S.gpg-agent" ]]
-       );
-    then
-        killall gpg-agent
-        gpg-agent --daemon --enable-ssh-support > $envfile
-    fi
-
-    # Get latest gpg-agent socket location and expose for use by SSH
-    eval "$(cat "$envfile")" && export SSH_AUTH_SOCK
-
-    # Wake up smartcard to avoid races
-    gpg --card-status > /dev/null 2>&1 
-fi
 
 alias fixkey="killall -9 gpg-agent && killall scdaemon && source .zshrc && ssh-add -L"
