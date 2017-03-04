@@ -41,7 +41,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/opt/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 export SSH_AUTH_SOCK=/run/user/$(id -u)/gnupg/S.gpg-agent.ssh
-
+export EDITOR=vim
 export QT_DEVICE_PIXEL_RATIO=auto
 
 source $ZSH/oh-my-zsh.sh
