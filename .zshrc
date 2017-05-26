@@ -40,10 +40,9 @@ plugins=(git vi-mode docker pass systemdi z)
 export PATH="/usr/local/bin:/usr/bin:/bin:/opt/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/Library/Python/2.7/bin:$PATH"
-export SSH_AUTH_SOCK=/run/user/$(id -u)/gnupg/S.gpg-agent.ssh
 export EDITOR=vim
 export QT_DEVICE_PIXEL_RATIO=auto
-
+source $HOME/.gnupg/gpg-agent.env
 source $ZSH/oh-my-zsh.sh
 source `pip2 show powerline-status | grep Location | sed 's/Location: //g'`/powerline/bindings/zsh/powerline.zsh
 
