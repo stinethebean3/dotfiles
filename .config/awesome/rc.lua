@@ -329,7 +329,14 @@ globalkeys = awful.util.table.join(
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+              {description = "show the menubar", group = "launcher"}),
+
+  -- Brightness
+
+    awful.key({ }, "XF86MonBrightnessDown", function ()
+        awful.util.spawn("/home/christine/.local/bin/brightness -5") end),
+    awful.key({ }, "XF86MonBrightnessUp", function ()
+        awful.util.spawn("/home/christine/.local/bin/brightness +5") end)
 )
 
 clientkeys = awful.util.table.join(
