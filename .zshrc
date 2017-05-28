@@ -37,7 +37,12 @@ DEFAULT_USER="cvick"
 plugins=(git vi-mode docker pass systemdi z)
 #
 
-export SSH_AUTH_SOCK=/run/user/$(id -u)/gnupg/S.gpg-agent.ssh
+## Choose correct gpg-agent path depending on OS
+if [ "$(uname -s)" = "Darwin" ]; then ## OSX
+	export SSH_AUTH_SOCK=/Users/$(id -un)/.gnupg/S.gpg-agent.ssh
+else ## All other Unix based OS
+	export SSH_AUTH_SOCK=/run/user/$(id -u)/gnupg/S.gpg-agent.ssh
+fi
 export EDITOR=vim
 export QT_DEVICE_PIXEL_RATIO=auto
 export NPM_PACKAGES="$HOME/.npm-packages"
