@@ -54,4 +54,7 @@ export PATH="$NPM_PACKAGES/bin:$PATH"
 source $ZSH/oh-my-zsh.sh
 source `pip2 show powerline-status | grep Location | sed 's/Location: //g'`/powerline/bindings/zsh/powerline.zsh
 
+## Import sensitive environment variables not tracked in git
+[ -e "$HOME/.secrets" ] && source "$HOME/.secrets"
+
 alias fixkey="killall -9 gpg-agent && killall scdaemon && source .zshrc && ssh-add -L"
