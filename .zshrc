@@ -7,9 +7,9 @@ ZSH=$HOME/.oh-my-zsh
 ## time that oh-my-zsh is loaded.
 ##ZSH_THEME="robbyrussell"
 #ZSH_THEME="agnoster"
-DEFAULT_USER="cvick"
 #
 ## Example aliases
+DEFAULT_USER="cvick"
 ## alias zshconfig="mate ~/.zshrc"
 ## alias ohmyzsh="mate ~/.oh-my-zsh"
 #
@@ -52,7 +52,8 @@ export PATH="$HOME/Library/Python/2.7/bin:$PATH"
 export PATH="$NPM_PACKAGES/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
-source `pip2 show powerline-status | grep Location | sed 's/Location: //g'`/powerline/bindings/zsh/powerline.zsh
+pl_zsh_module=/usr/share/powerline/bindings/zsh/powerline.zsh
+[ -f "$pl_zsh_module" ] && source "$pl_zsh_module"
 
 ## Import sensitive environment variables not tracked in git
 [ -e "$HOME/.secrets" ] && source "$HOME/.secrets"
