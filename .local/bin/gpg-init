@@ -10,13 +10,12 @@ if [ -z "$SSH_TTY" ]; then
           [[ ! -e "/var/run/user/$(id -u)/gnupg/S.gpg-agent" ]]
        );
     then
-		killall pinentry
+		killall pinentry > /dev/null 2>&1
 		gpgconf --reload scdaemon
-		/usr/bin/pkill -x -INT gpg-agent
+		/usr/bin/pkill -x -INT gpg-agent > /dev/null 2>&1
         gpg-agent \
         	--daemon \
-        	--enable-ssh-support \
-        	--log-file "/dev/stdout"
+        	--enable-ssh-support
     fi
 
     # Wake up smartcard to avoid races
