@@ -1,3 +1,8 @@
 [user]
-	email = cdevlin23.cd@gmail.com
-	name = Christine Vick
+    email = cdevlin23.cd@gmail.com
+    name = Christine Vick
+    signingKey = A0E5035657E55E6BEEAAD809D427E91F7B76FD0D # get from 'gpg --list-keys'
+[commit]
+    gpgSign = true
+[gpg]
+    program = gpg
