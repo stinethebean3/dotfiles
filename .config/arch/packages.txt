@@ -42,7 +42,6 @@ findutils
 firefox
 flatpak
 flex
-freecad
 fuse2
 gawk
 gcc
@@ -52,8 +51,6 @@ gimp
 git
 glibc
 gnu-netcat
-google-chrome
-google-drive-ocamlfuse
 grep
 groff
 grub
@@ -100,7 +97,6 @@ man-pages
 mdadm
 mesa-demos
 mosh
-mosh-git
 mplayer
 nano
 ncdu
@@ -121,7 +117,6 @@ pass
 patch
 pavucontrol
 pciutils
-pcmciautils
 pcsc-tools
 perl
 perl-image-exiftool
@@ -186,10 +181,8 @@ xf86-video-amdgpu
 xf86-video-ati
 xfsprogs
 xorg-server
-xorg-server-utils
 xorg-xev
 xorg-xinit
-yaourt
 yubikey-manager
 yubikey-personalization
 zsh
