@@ -34,3 +34,6 @@ path = bundle/closetag
 [submodule ".vim/bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule ".vim"]
+	path = .vim
+	url = https://github.com/lrvick/dotvim

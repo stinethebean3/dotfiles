@@ -1,3 +1,5 @@
+# Tell gpg about graphical environment
+gpg-connect-agent updatestartuptty /bye
 
 # Enable xorg settings, fonts etc
 xrdb -merge ~/.Xresources 
@@ -13,15 +15,11 @@ nitrogen --restore #loads wallpaper
 chromium & 
 
 # Launch Terminal
-termite &
+kitty &
 
 # Start compositer
 # makes 3D and tranparent terminals work
 compton &
 
 # Start Window Manager
-awesome
-
-
-
-
+i3
