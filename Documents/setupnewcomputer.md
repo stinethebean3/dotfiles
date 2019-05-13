@@ -1,7 +1,7 @@
 1. Install extra pacakges
 
 ```
-sudo pacman -S wget powerline zsh
+sudo pacman -S wget powerline zsh ttf-fira-code
 ```
 2. Change default shell for terminal to zsh
 
